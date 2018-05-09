@@ -1,0 +1,15 @@
+% Displays More Help information
+
+fprintf('This script is designed to guide the user through the other scripts  \n')
+fprintf(' in the post processing folder.  \n')
+fprintf('  \n')
+fprintf('It takes a number of default variables, with prefix <ux_*>, and uses  \n')
+fprintf(' these to automatically import, extract, calculate and plot the important \n')
+fprintf(' values for Inductive Power Transfer. \n')
+fprintf('  \n')
+fprintf('Two datasets are expected, Experimental <exp_*> and Finite Element <fea_*>.  \n')
+fprintf('  \n')
+fprintf('Please take a minute now to load the defaults to the workspace, with <d>,  \n')
+fprintf(' and edit them to suit your dataset. \n')
+fprintf('  \n')
+fprintf('If you have any further issues, please contact the devloper.  \n')
