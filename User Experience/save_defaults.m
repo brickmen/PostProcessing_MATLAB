@@ -1,4 +1,4 @@
-%Sets Path to save workspace as-is asking for user
+%Saves all <ux_*> variables to defaults.mat
 
 ux_string = 'defaults';
 save( [ux_string '.mat'], 'ux_*' );

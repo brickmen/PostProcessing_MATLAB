@@ -23,17 +23,25 @@ switch ux_user_input
         return
    
 end
-fprintf(' Would you like to extract the imported datasets into the typical values? \n' )
+fprintf(' Would you like to extract the imported FEA datasets into mutual/self values? \n' )
+ux_prompt = '  <1> yes, <0> no: ';
+ux_user_input = input(ux_prompt, 's');
+switch ux_user_input  
+    case '1'
+        fprintf(' Dataset Extraction Started \n')
+        guided_FEA_dataset_extraction;
+    otherwise
+        fprintf(' Skipped\n')
+        
+end
+fprintf(' Would you like to extract the imported EXP datasets into mutual/self/phase/voltage/current values? \n' )
 ux_prompt = '  <1> yes, <0> no: ';
 ux_user_input = input(ux_prompt, 's');
 switch ux_user_input
-    case '0'
-        fprintf(' Finished.\n')
-        return
     case '1'
         fprintf(' Dataset Extraction Started \n')
-        guided_dataset_extraction;
+        guided_EXP_dataset_extraction;
     otherwise
-        fprintf(' Finished\n')
-        return
+        fprintf(' Skipped\n')
+
 end

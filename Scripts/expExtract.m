@@ -9,9 +9,9 @@ for i = 1:1:length(exp_import)
     waitbar(ux_wb_progress,ux_wb,ux_wb_msg)
     Mp1 = 1000000* exp_import(i,6) /  (exp_import(i,5)*2*pi*exp_import(i,11));
     Mp2 = 1000000* exp_import(i,7) /  (exp_import(i,5)*2*pi*exp_import(i,11));
-    x_value = exp_import(i,1) - x_offset;
-    y_value = exp_import(i,2) - y_offset;
-    z_value = exp_import(i,3) - z_offset;
+    x_value = exp_import(i,1) + ux_exp_calibration_x;
+    y_value = exp_import(i,2) + ux_exp_calibration_y;
+    z_value = exp_import(i,3) + ux_exp_calibration_z;
     if Mp1 > Mp1_max || Mp2 > Mp2_max
         fprintf('Mutual exceeds max limits at index %i data point ignored. Consider testing for outliers or reducing data set \n', i)
     else
