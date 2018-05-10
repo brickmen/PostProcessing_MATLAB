@@ -17,6 +17,7 @@ for i = 1:1:length(exp_import)
     else
         exp_mutual_p1(index,:) = [ x_value y_value z_value Mp1];
         exp_mutual_p2(index,:) = [ x_value y_value z_value Mp2];
+        exp_mutual_both(index,:) = [ x_value y_value z_value Mp1+Mp2];
         
         exp_phase_p1(index,:) = [ x_value y_value z_value exp_import(i,8)];
         exp_phase_p2(index,:) = [ x_value y_value z_value exp_import(i,9)];
