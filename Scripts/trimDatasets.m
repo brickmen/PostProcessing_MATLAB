@@ -2,8 +2,8 @@
 
 index=1;
 for i = 1:1:length(dataset_to_trim)
-    if dataset_to_trim(i,1) >= x_min_lim && dataset_to_trim(i,1) >= x_min_lim
-        if dataset_to_trim(i,2) >= y_min_lim && dataset_to_trim(i,2) >= y_min_lim
+    if dataset_to_trim(i,1) >= x_min_lim && dataset_to_trim(i,1) <= x_max_lim
+        if dataset_to_trim(i,2) >= y_min_lim && dataset_to_trim(i,2) <= y_max_lim
             reduced_dataset(index,:) = dataset_to_trim (i,:);
             index = index +1;
         end

@@ -7,7 +7,7 @@ figure(2);
 
 
 plotTitle = ['FE values vs EXP values, Difference Trends for all Z'];
-plot( err_summary(:,1),err_summary(:,2), '-',err_summary(:,1),err_summary(:,3),err_summary(:,1),err_summary(:,4),err_summary(:,1),err_summary(:,5),err_summary(:,1),err_summary(:,6),err_summary(:,1),err_summary(:,7),err_summary(:,1),err_summary(:,8), err_summary(:,1),err_summary(:,9),'LineWidth',2)
+plot( err_summary(:,1),err_summary(:,2), '--o',err_summary(:,1),err_summary(:,3), '--o',err_summary(:,1),err_summary(:,4),err_summary(:,1),err_summary(:,5),':*',err_summary(:,1),err_summary(:,6),':*',err_summary(:,1),err_summary(:,7),':*',err_summary(:,1),err_summary(:,8), err_summary(:,1),err_summary(:,9),'LineWidth',2)
 xlabel('Gap (Z) Position')
 ylabel('Percentage Difference')
 title(plotTitle )
