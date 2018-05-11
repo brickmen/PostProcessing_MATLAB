@@ -2,16 +2,16 @@
 
 %set the suitable XY spacing to the dataset for meshgrid, should match or
 %exceed the tatget XY resolution
-x_spacing = 2;
-y_spacing = 2;
-exp_values = interp_target;
+x_spacing = 1;
+y_spacing = 1;
+
 %Set gridddata limits, should match target dataset limits
-exp_x_max = max(interp_target(:,1));
-exp_x_min = min(interp_target(:,1));
-exp_y_max = max(interp_target(:,2));
-exp_y_min = min(interp_target(:,2));
+x_max = max(interp_target(:,1));
+x_min = min(interp_target(:,1));
+y_max = max(interp_target(:,2));
+y_min = min(interp_target(:,2));
 %Set the Grid
-[X,Y] = meshgrid(exp_x_min:x_spacing:exp_x_max,exp_y_min:y_spacing:exp_y_max);
+[X,Y] = meshgrid(x_min:x_spacing:x_max,y_min:y_spacing:y_max);
 % Griddata all z slices into structure
 z_values = unique(interp_target(:,3));
 self_s_z = struct;

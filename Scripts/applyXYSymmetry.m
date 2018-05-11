@@ -3,9 +3,9 @@
 mss_unique_z = unique(measured_values(:,3));
 mss_unique_y = unique(measured_values(:,2));
 mss_unique_x = unique(measured_values(:,1));
-mss_total= length(mss_unique_x)*length(mss_unique_y)*length(mss_unique_z)
+mss_total= length(mss_unique_x)*length(mss_unique_y)*length(mss_unique_z);
 
-index = 1
+index = 1;
 for i = 1:1:length(mss_unique_x)
     for j = 1:1:length(mss_unique_z)
         
