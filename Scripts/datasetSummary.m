@@ -20,6 +20,7 @@ exp_values = reduced_dataset;
 
 % Find the shared Z values
 findSharedZSlices;
+% Column nos:           1           2           3           4           5         6          7         8        9       10
 summary_labels(:) = [ 'Z Value', 'FEA Mean','EXP Mean','Delta Mean','FEA max','EXP max','Delta Max','FEA min','EXP min','Delta Min'];
 disp(summary_labels)
 %Print details to screen (save to table)

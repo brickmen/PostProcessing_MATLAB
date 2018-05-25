@@ -91,42 +91,42 @@ title(ax8,plotTitle )
 %make Graphs Pretty
 ax1.XGrid = 'on';
 ax1.YGrid = 'on';
-ax1.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax1.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax1.XTick = ux_x_ticks;
+ax1.YTick = ux_y_ticks;
 
 ax2.XGrid = 'on';
 ax2.YGrid = 'on';
-ax2.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax2.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax2.XTick = ux_x_ticks;
+ax2.YTick = ux_y_ticks;
 
 ax3.XGrid = 'on';
 ax3.YGrid = 'on';
-ax3.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax3.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax3.XTick = ux_x_ticks;
+ax3.YTick = ux_y_ticks;
 
 ax4.XGrid = 'on';
 ax4.YGrid = 'on';
-ax4.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax4.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax4.XTick = ux_x_ticks;
+ax4.YTick = ux_y_ticks;
 
 ax5.XGrid = 'on';
 ax5.YGrid = 'on';
-ax5.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax5.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax5.XTick = ux_x_ticks;
+ax5.YTick = ux_y_ticks;
 
 ax6.XGrid = 'on';
 ax6.YGrid = 'on';
-ax6.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax6.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax6.XTick = ux_x_ticks;
+ax6.YTick = ux_y_ticks;
 
 ax7.XGrid = 'on';
 ax7.YGrid = 'on';
-ax7.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax7.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax7.XTick = ux_x_ticks;
+ax7.YTick = ux_y_ticks;
 
 ax8.XGrid = 'on';
 ax8.YGrid = 'on';
-ax8.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax8.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax8.XTick = ux_x_ticks;
+ax8.YTick = ux_y_ticks;
 
 

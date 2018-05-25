@@ -16,9 +16,11 @@ for i = 1:1:length(fea_import.(struct_title))
    fea_mutual_p1(i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) fea_import.(char(ux_fea_import_mid(7)))(i,4)-fea_import.(char(ux_fea_import_mid(9)))(i,4)];
    fea_mutual_p2(i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) -fea_import.(char(ux_fea_import_mid(8)))(i,4)+fea_import.(char(ux_fea_import_mid(10)))(i,4)];
 
-   % Self inductance sourse of both selfs plus mutual
+   % Self inductance source of both selfs plus mutual
    Ms1 =fea_import.(char(ux_fea_import_mid(4)))(i,4)+fea_import.(char(ux_fea_import_mid(6)))(i,4)-2*fea_import.(char(ux_fea_import_mid(5)))(i,4);
    fea_self_s(i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) Ms1];
+   Mp1 =fea_import.(char(ux_fea_import_mid(1)))(i,4)+fea_import.(char(ux_fea_import_mid(2)))(i,4)-2*fea_import.(char(ux_fea_import_mid(3)))(i,4);
+   fea_self_p(i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) Mp1];
    
    fea_self_p1(i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) fea_import.(char(ux_fea_import_mid(1)))(i,4)];
    fea_self_p2(i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) fea_import.(char(ux_fea_import_mid(2)))(i,4)];
@@ -35,9 +37,11 @@ for i = 1:1:length(fea_import.(struct_title))
    fea_mutual_p1(j+i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) -fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) fea_import.(char(ux_fea_import_mid(7)))(i,4)-fea_import.(char(ux_fea_import_mid(9)))(i,4)];
    fea_mutual_p2(j+i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) -fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) -fea_import.(char(ux_fea_import_mid(8)))(i,4)+fea_import.(char(ux_fea_import_mid(10)))(i,4)];
 
-   % Self inductance sourse of both selfs
+    % Self inductance source of both selfs plus mutual
    Ms1 =fea_import.(char(ux_fea_import_mid(4)))(i,4)+fea_import.(char(ux_fea_import_mid(6)))(i,4)-2*fea_import.(char(ux_fea_import_mid(5)))(i,4);
    fea_self_s(j+i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) -fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) Ms1];
+   Mp1 =fea_import.(char(ux_fea_import_mid(1)))(i,4)+fea_import.(char(ux_fea_import_mid(2)))(i,4)-2*fea_import.(char(ux_fea_import_mid(3)))(i,4);
+   fea_self_p(j+i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) -fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) Mp1];
    
    fea_self_p1(j+i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) -fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) fea_import.(char(ux_fea_import_mid(1)))(i,4)];
    fea_self_p2(j+i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) -fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) fea_import.(char(ux_fea_import_mid(2)))(i,4)];

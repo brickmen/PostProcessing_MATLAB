@@ -8,43 +8,27 @@ ux_prompt = ' <1> yes, <> skip: ';
 ux_user_input = input(ux_prompt, 's');
 switch ux_user_input
     case '1'
-        fprintf(' Set P1 \n')
-        measured = ux_exp_measured_p1;
-        expSetFixedSelf;
-        exp_self_p1 = self_coil;
-        measured = ux_exp_measured_p2;
-        expSetFixedSelf;
-        exp_self_p2 = self_coil;
+        setEXPSelfP1P2;
     otherwise
         fprintf(' Skipped.\n')
 
 end
 
 fprintf(' How do you want to set combined self inductances? \n', ux_exp_measured_p1, ux_exp_measured_p2)
-ux_prompt = ' <1> use FEA Values, <2> set single values, <3> use <measured_self_source/pickup>, <> skip: ';
+ux_prompt = ' <1> reuse existing and interpolate, <2> set single values, <3> use <measured_self_source/pickup>, <> skip: ';
 ux_user_input = input(ux_prompt, 's');
 switch ux_user_input
     case '1'
-        fprintf(' Error Not yet Available \n')
+        fprintf(' Reusing existing \n')
+        reuseEXPSelfValues;
         % TODO#
     case '2'
-        fprintf(' Error Not yet Available \n')
-        % TODO
+        fprintf(' Setting Fixed Self S/P inductances of %4.2f and %4.2f uH \n', ux_exp_measured_s, ux_exp_measured_p)
+        setEXPSelfSP;
     case '3'
         fprintf(' Using Measured Self Values \n')
         % Find all Z slices needed
-        measured_values = measured_self_source;
-        applyXYSymmetry;
-        interp_target = exp_mutual_p1;
-        interp_input = measured_values_symmetry;
-        interpolateXYtoMatch;
-        exp_self_s = interp_results;
-        measured_values = measured_self_pickup;
-        applyXYSymmetry;
-        interp_target = exp_mutual_p1;
-        interp_input = measured_values_symmetry;
-        interpolateXYtoMatch;
-        exp_self_p = interp_results;
+        setEXPSelfSandPFromMeasured;
         
     otherwise
         fprintf(' Skipped.\n')

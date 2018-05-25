@@ -1,5 +1,6 @@
 % Plots Errors for Two Plots
-
+fea_z_value_selected = z_value_selected;
+exp_z_value_selected = z_value_selected;
 
 
 fea_values= fea_mutual_p1;
@@ -28,7 +29,7 @@ title(ax2,plotTitle )
 plotValues = fea_values(fea_values(:,3)==fea_z_value_selected,:);
 plotTitle = ['FEA/EXP Percent Error in P1 ' ];
 Z_ax3 = 100*rdivide((Z_ax - Z_ax2),Z_ax);
-contourf(ax3, X, Y,Z_ax3)
+contourf(ax3, X, Y,Z_ax3,8)
 caxis(ax3,[-20 20])
 xlabel(ax3,'Slide (X) Position')
 ylabel(ax3,'Offset (Y) Position')
@@ -74,7 +75,7 @@ title(ax6,plotTitle )
 plotValues = fea_values(fea_values(:,3)==fea_z_value_selected,:);
 plotTitle = ['FEA/EXP Percent Error in P2 ' ];
 Z_ax3 = 100*rdivide((Z_ax - Z_ax2),Z_ax);
-contourf(ax7, X, Y,Z_ax3)
+contourf(ax7, X, Y,Z_ax3,8)
 caxis(ax7,[-20 20])
 xlabel(ax7,'Slide (X) Position')
 ylabel(ax7,'Offset (Y) Position')
@@ -95,42 +96,42 @@ title(ax7,plotTitle )
 %make Graphs Pretty
 ax1.XGrid = 'on';
 ax1.YGrid = 'on';
-ax1.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax1.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax1.XTick = ux_xy_ticks;
+ax1.YTick = ux_xy_ticks;
 
 ax2.XGrid = 'on';
 ax2.YGrid = 'on';
-ax2.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax2.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax2.XTick = ux_xy_ticks;
+ax2.YTick = ux_xy_ticks;
 
 ax3.XGrid = 'on';
 ax3.YGrid = 'on';
-ax3.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax3.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax3.XTick = ux_xy_ticks;
+ax3.YTick = ux_xy_ticks;
 
 ax4.XGrid = 'on';
 ax4.YGrid = 'on';
-ax4.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax4.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax4.XTick = ux_xy_ticks;
+ax4.YTick = ux_xy_ticks;
 
 ax5.XGrid = 'on';
 ax5.YGrid = 'on';
-ax5.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax5.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax5.XTick = ux_xy_ticks;
+ax5.YTick = ux_xy_ticks;
 
 ax6.XGrid = 'on';
 ax6.YGrid = 'on';
-ax6.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax6.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax6.XTick = ux_xy_ticks;
+ax6.YTick = ux_xy_ticks;
 
 ax7.XGrid = 'on';
 ax7.YGrid = 'on';
-ax7.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax7.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax7.XTick = ux_xy_ticks;
+ax7.YTick = ux_xy_ticks;
 
 ax8.XGrid = 'on';
 ax8.YGrid = 'on';
-ax8.XTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
-ax8.YTick = [-50 -40 -30 -20 -10 0 10 20 30 40 50];
+ax8.XTick = ux_xy_ticks;
+ax8.YTick = ux_xy_ticks;
 
 

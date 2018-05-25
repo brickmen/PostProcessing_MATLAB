@@ -11,6 +11,9 @@ fprintf('Guidance: This tool is developed to import .csv values from ANSYS Maxwe
 fprintf('  and .mat files from auto measurements script into the MATLAB workspace. \n') 
 fprintf('  It can also manage data and produce graphs for display and export. \n')
 
+% Delete input Var as it messes things up
+clearvars input;
+
 % User Menu
 ux_prompt = 'What would you like to do? Type <h> for help: ';
 ux_user_input = input(ux_prompt, 's');
@@ -25,14 +28,14 @@ switch ux_user_input
         fprintf('  <p>    Generate Plots \n')
         fprintf('  <s>    Save State of workspace \n')
         fprintf('  <t>    Tidy up workspace leaving ux, fea, and exp values \n')
-        fprintf('  <cle>  Wipes everything from the workspace and paths  \n')
+        fprintf('  <cle>  Wipes everything (apart from ux_*) from the workspace and paths  \n')
         fprintf('  <hh>   Show More Help  \n')
     case 'a'
         fprintf('Guide Through All Steps \n')
         guided_all;
     case 'd'
         fprintf('Load defaults\n')
-        set_defaults;
+        setDefaults;
     case 'i'
         fprintf('Import Data\n')
         guided_import;
@@ -49,9 +52,10 @@ switch ux_user_input
         fprintf('Tidy up workspace leaving ux, fea, exp, and err values\n')
         clearvars -except ux_* fea_* exp_* err_*
     case 'cle'
-        fprintf('Clearing everything from the workspace and paths\n')
+        fprintf('Clearing everything (apart from ux_*)from the workspace and paths\n')
+        
+        clearvars -except ux_*
         restoredefaultpath;
-        clear;
     case 'hh'
         fprintf('Loading Extended Help\n')
         extended_help;

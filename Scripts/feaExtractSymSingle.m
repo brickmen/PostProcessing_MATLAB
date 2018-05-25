@@ -22,7 +22,7 @@ for i = 1:1:length(fea_import.(struct_title))
    
    fea_self_p1(i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) fea_import.(char(ux_fea_import_mid(1)))(i,4)];
    fea_self_p2(i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) fea_import.(char(ux_fea_import_mid(2)))(i,4)];
-   
+   fea_self_p(i,:) = fea_self_p1(i,:);
 end
 j = i;
 %Run again for symmetry in offset
@@ -41,5 +41,5 @@ for i = 1:1:length(fea_import.(struct_title))
    
    fea_self_p1(j+i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) -fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) fea_import.(char(ux_fea_import_mid(1)))(i,4)];
    fea_self_p2(j+i,:) = [fea_import.(char(ux_fea_import_mid(7)))(i,1) -fea_import.(char(ux_fea_import_mid(7)))(i,2) fea_import.(char(ux_fea_import_mid(7)))(i,3) fea_import.(char(ux_fea_import_mid(2)))(i,4)];
-   
+   fea_self_p(j+i,:) = fea_self_p1(j+i,:);
 end

@@ -14,3 +14,4 @@ for i = 1:1:length(fea_z_values)
 end
 fprintf('Shared z values in both sets are:')
 disp(shared_z_values)
+z_values= shared_z_values;

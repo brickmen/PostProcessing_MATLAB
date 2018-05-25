@@ -4,6 +4,7 @@
 %exceed the tatget XY resolution
 x_spacing = 1;
 y_spacing = 1;
+interp_results = [0 0 0 0];
 
 %Set gridddata limits, should match target dataset limits
 x_max = max(interp_target(:,1));
@@ -20,7 +21,7 @@ for idx = 1:numel(z_values)
     plotValues = interp_input(interp_input(:,3)==i,:);
     gridname = [ 'z' num2str(i)];
     self_s_z.(gridname)=griddata(plotValues(:,1),plotValues(:,2),plotValues(:,4),X,Y);
-    fprintf('Z self s contour of %4.2f done \n ', i)
+    fprintf('Z self s contour of %4.2f done \n', i)
 end
 %look up the suitable results from structure
 for i = 1:1:length(interp_target)
@@ -30,7 +31,7 @@ for i = 1:1:length(interp_target)
     I = find(X(1,:) == interp_results(i,1));
     J = find(Y(:,1) == interp_results(i,2));
     gridname = [ 'z' num2str(interp_results(i,3))];
-    extracted_val = self_s_z.(gridname)(I,J);
+    extracted_val = self_s_z.(gridname)(J,I);
     if isnan(extracted_val)
         extracted_val = min(min(self_s_z.(gridname),[],'omitnan'));
     end

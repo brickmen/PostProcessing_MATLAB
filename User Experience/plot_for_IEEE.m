@@ -6,6 +6,7 @@ exp_values = exp_mutual_p1;
 findSharedZSlices;
 findSharedXYLimits;
 [X,Y] = meshgrid(x_min_lim:ux_plot_grid_res:x_max_lim,y_min_lim:ux_plot_grid_res:y_max_lim);
+setXYTicks;
 
 eightAxPlotSetup;
 fprintf(' Plotting results and saving .PNG files to %s \n', ux_export_path )
@@ -20,10 +21,16 @@ switch ux_user_input
    
 end
 
+results= exp_mutual_both;
+singleSetZSlicesXYLimits
+setXY2dSamplePoints;
 plot2dEXPSummary;
 plot_file_name =  'exp_summary';
 highResPlotSave;
 
+results= fea_mutual_both;
+singleSetZSlicesXYLimits
+setXY2dSamplePoints;
 plot2dFEASummary
 plot_file_name = 'fea_summary';
 highResPlotSave;
