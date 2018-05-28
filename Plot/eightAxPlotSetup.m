@@ -21,4 +21,4 @@ title(ax8,' Figure 8')
 
 % view(ax1,[175,25])
 colormap('jet')
-
+set(gcf,'color','w');

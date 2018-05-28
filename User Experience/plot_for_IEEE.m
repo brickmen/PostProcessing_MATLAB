@@ -9,6 +9,7 @@ findSharedXYLimits;
 setXYTicks;
 
 eightAxPlotSetup;
+set(gcf,'color','w');
 fprintf(' Plotting results and saving .PNG files to %s \n', ux_export_path )
 ux_prompt = ' Please resize Figure window to preferred sizing. <1> when ready or <> to cancel ';
 ux_user_input = input(ux_prompt, 's');
@@ -55,5 +56,15 @@ for i= 1:length(shared_z_values)
     
 end
 errorPlotZTrend;
+ux_prompt = ' Please resize Figure window to preferred sizing. <1> when ready or <> to cancel ';
+ux_user_input = input(ux_prompt, 's');
+switch ux_user_input
+    case '1'
+        fprintf(' Plotting Please Wait...\n')
+    otherwise
+        fprintf(' Cancelling\n')
+        return
+   
+end
 plot_file_name = 'error_trends';
 highResPlotSave;

@@ -2,7 +2,6 @@
 
 % i is from calling script "guided_error_plot_all_slices.m"
 err_summary(i,:) = [ fea_z_value_selected, 0,0,0,0,0,0,0,0 ];
-err_labels = [ "Z value", "Mutual to Pickup 1", "Mutual to Pickup 2", "Coupling Both", "Self Source", "Self Pickup 1", "Self Pickup 2", "Coupling to Pickup 1", "Coupling to Pickup 2"];
 
 fea_values= fea_mutual_p1;
 plotValues = fea_values(fea_values(:,3)==fea_z_value_selected,:);

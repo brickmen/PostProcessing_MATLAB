@@ -53,7 +53,6 @@ switch ux_user_input
         clearvars -except ux_* fea_* exp_* err_*
     case 'cle'
         fprintf('Clearing everything (apart from ux_*)from the workspace and paths\n')
-        
         clearvars -except ux_*
         restoredefaultpath;
     case 'hh'

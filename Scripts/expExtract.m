@@ -25,7 +25,8 @@ for i = 1:1:length(exp_import)
         exp_source_v(index,:) = [ x_value y_value z_value exp_import(i,4)];
         exp_source_i(index,:)  = [ x_value y_value z_value exp_import(i,5)];
         exp_freq(index,:) = [ x_value y_value z_value exp_import(i,11)];
-
+        exp_pickup_v1(index,:)  = [ x_value y_value z_value exp_import(i,6)];
+        exp_pickup_v2(index,:)  = [ x_value y_value z_value exp_import(i,7)];
         index = index+1;
     end
 end
